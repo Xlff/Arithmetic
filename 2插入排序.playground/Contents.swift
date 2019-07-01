@@ -7,9 +7,7 @@ func insertionSort(_ nums: inout [Int]) {
   
     for i in 1 ..< nums.count {
         var j = i
-        print("第\(i)次排序")
         while j > 0 && nums[j] < nums[j-1] {
-            print(nums)
             nums.swapAt(j-1 , j)
             j -= 1
         }
