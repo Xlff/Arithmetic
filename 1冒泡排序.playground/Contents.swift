@@ -8,7 +8,9 @@ func bubbleSort(_ nums: inout [Int]) {
     
     for i in 0..<n {
         var flag = true
+        print("i = \(i)")
         for j in 0 ..< k {
+            print("j = \(j)")
             if nums[j] > nums[j+1] {
                 nums.swapAt(j, j+1)
                 flag = false

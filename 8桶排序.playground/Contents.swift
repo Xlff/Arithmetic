@@ -55,7 +55,27 @@ func shellSort(_ a: inout [Int]) {
     }
 }
 
-var a =  [ 8, 1, 4, 6, 2, 3, 5, 7 ]
+var a =  [ 8, 1, 4, 16, 2, 3, 5, 7 ]
 print(bucketSort(a, 3))
 
 
+
+
+func bucketSort2(_ a: [Int]) -> [Int] {
+    var buckets = [Int:Int]()
+    
+    for i in 0...a.count {
+        buckets[i] = 0
+    }
+    print(buckets)
+    for i in a {
+        var numbers = buckets[i] ?? 0
+        numbers += 1
+        buckets[i] = numbers
+    }
+    print(buckets)
+    
+    
+    return [Int]()
+}
+bucketSort2(a)
