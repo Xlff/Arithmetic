@@ -7,7 +7,7 @@ func bubbleSort(_ nums: inout [Int]) {
     var k = n-1 // 内循环判断条件
     
     for i in 0..<n {
-        var flag = true
+        var flag = true  //若数组已经是有序的 提前结束break
         print("i = \(i)")
         for j in 0 ..< k {
             print("j = \(j)")
@@ -19,8 +19,10 @@ func bubbleSort(_ nums: inout [Int]) {
             }
         }
         k = swap
+
         if flag {
-            break;
+            print("已排序")
+            break
         }
     }
 }

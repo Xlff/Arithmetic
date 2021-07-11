@@ -4,6 +4,7 @@ import UIKit
 
 
 func mergeSort(_ a: [Int]) -> [Int] {
+    print("开始计算： \(a)")
     guard a.count > 1 else { return a }
     let middleIndex = a.count / 2
     let leftArray = mergeSort(Array(a[0..<middleIndex]))
@@ -13,6 +14,7 @@ func mergeSort(_ a: [Int]) -> [Int] {
 }
 
 func merge(leftPile: [Int], rightPile: [Int]) -> [Int] {
+    print(leftPile, rightPile)
     var leftIndex = 0
     var rightIndex = 0
     
